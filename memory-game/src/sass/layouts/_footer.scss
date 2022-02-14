@@ -1,0 +1,67 @@
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background-color: $color-blacgraund-footer;
+  @include media-tablet {
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  @include media-mobile {
+    flex-wrap: wrap;
+  }
+}
+
+.footer__data {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0;
+  @include media-tablet {
+  }
+
+  @include media-mobile {
+    padding: 0px;
+    align-items: center;
+  }
+}
+
+.social {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  a {
+    &:hover {
+      @extend %transition;
+      filter: $hover;
+    }
+  }
+}
+
+.copyright-rs,
+.github {
+  a {
+    @include font(2rem, 5rem, $wight: 400);
+    @extend %font;
+    @extend %transition;
+    &:hover {
+      color: #6e6b6bb4;
+    }
+    @include media-tablet {
+      line-height: 2.4rem;
+    }
+  }
+}
+
+.footer__copyright {
+  width: 70px;
+  &:hover {
+    filter: $hover;
+    @extend %transition;
+  }
+}

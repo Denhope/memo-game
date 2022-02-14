@@ -1,0 +1,20 @@
+// colors//
+$white: #ffffff;
+$black: #000000;
+$blackMat: #1c1c1c;
+$hover: invert(0%) sepia(6%) saturate(1898%) hue-rotate(316deg) brightness(70%)
+  contrast(78%);
+$color-text: $white;
+$color-text-light: $blackMat;
+$color-blacgraund-header: linear-gradient(171deg, #280228, #1c1c1c 81%);
+$color-blacgraund-gallery: linear-gradient(225deg, #1c1c1c, #280228 81%);
+$color-fill: $blackMat;
+$color-blacgraund-footer: #280228;
+
+// width//
+$content-width: 1440px;
+$content-width-620: 620px;
+$laptop-width: 1024px;
+$tablet-width: 768px;
+$mobile-big-width: 426px;
+$mobile-small-width: 320px;
