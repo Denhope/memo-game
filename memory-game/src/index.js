@@ -1,3 +1,5 @@
-// import * as Gallery from "./js/_gallery";
+import { randomize } from "./js/_data";
+import { createBoard } from "./js/_gameBoard";
 // import * as Score from "./js/_score";
-// Gallery.init();
+randomize();
+createBoard();
