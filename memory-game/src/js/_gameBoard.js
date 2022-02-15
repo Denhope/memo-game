@@ -1,7 +1,7 @@
-import { checkCard } from "./_checkCard";
+import { checkCards } from "./_gameLogic";
 import { getRandomPicture } from "./_data";
 
-// create game board
+// create game field
 export function createBoard() {
   const gameBoard = document.querySelector(".game-board__wrapper");
   const cardData = getRandomPicture();
@@ -17,10 +17,11 @@ export function createBoard() {
     card.appendChild(backSide);
     card.setAttribute("data-name", element.name);
     picture.src = element.imgSrc;
+
     //set listener
     card.addEventListener("click", (evt) => {
       card.classList.toggle("card__toggle");
-      checkCard(evt);
+      checkCards(evt);
     });
   });
 }
