@@ -4,9 +4,11 @@
 //   justify-content: center;
 //   flex-wrap: wrap;
 //   gap: 20px;
+//   pointer-events: none;
 // }
+//
 .game-board__wrapper {
-  // margin: auto;
+  // margin: 0 auto;
   display: grid;
   justify-content: center;
 
@@ -19,12 +21,15 @@
 .backside {
   width: 100%;
   height: 100%;
+
   cursor: pointer;
   border-radius: 10%;
   position: absolute;
   pointer-events: none;
 }
 .card {
+  // width: 200px;
+  // height: 200px;
   position: relative;
   @extend %transition;
   box-shadow: $color-fill;
@@ -46,4 +51,7 @@
 
 .card__toggle {
   transform: rotateY(180deg);
+}
+.active {
+  pointer-events: none;
 }

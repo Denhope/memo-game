@@ -1,0 +1,13 @@
+.score-block {
+  display: flex;
+  gap: 10px;
+  .title {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+
+    .time_counter {
+      width: 55px;
+    }
+  }
+}

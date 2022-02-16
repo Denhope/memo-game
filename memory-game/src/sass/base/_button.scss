@@ -1,0 +1,23 @@
+.button {
+  min-width: 220px;
+  padding: 6px 0px;
+  font-family: Inter;
+  @include font(2rem, 4rem, $wight: normal);
+  cursor: pointer;
+  text-align: center;
+
+  // background-color: transparent;
+  border: 2px solid $violet;
+  color: $blackMat;
+  &:hover {
+    color: $color-hovered;
+  }
+  @extend %transition;
+  &_active {
+    background-color: $color-fill;
+    color: $blackMat;
+    &:hover {
+      color: $color-hovered;
+    }
+  }
+}
