@@ -8,13 +8,13 @@ import { getScoreCounter } from "./_scoreCounter";
 export function createBoard() {
   let steps = 0;
   const stepCounter = document.querySelector(".step_counter");
-
   const body = document.querySelector("body");
   const gameBoard = document.querySelector(".game-board__wrapper");
   const startPlayButton = document.querySelector(".start-play");
   const startWindow = document.querySelector(".start-window");
   const cardData = getRandomPicture();
-  cardData.forEach((element) => {
+
+  const createFieldCard = (element) => {
     const card = document.createElement("div");
     const picture = document.createElement("img");
     const backSide = document.createElement("div");
@@ -27,19 +27,22 @@ export function createBoard() {
     card.setAttribute("data-name", element.name);
     picture.src = element.imgSrc;
 
-    //set listener
+    //clisk card
     card.addEventListener("click", (evt) => {
       card.classList.toggle("card__toggle");
       checkCards(evt);
       steps++;
       stepCounter.innerHTML = steps;
     });
+  };
 
-    startPlayButton.addEventListener("click", (evt) => {
-      startWindow.classList.add("start-window__hidden");
-      body.classList.remove("body_lock");
-      gameBoard.style.pointerEvents = "auto";
-      timer();
-    });
-  });
+  const startPlay = () => {
+    startWindow.classList.add("start-window__hidden");
+    body.classList.remove("body_lock");
+    gameBoard.style.pointerEvents = "auto";
+    timer();
+  };
+  //set listener
+  startPlayButton.addEventListener("click", startPlay);
+  cardData.forEach((element) => createFieldCard(element));
 }
