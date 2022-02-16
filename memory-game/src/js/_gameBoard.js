@@ -1,8 +1,7 @@
 import { checkCards } from "./_gameLogic";
 import { getRandomPicture } from "./_data";
 import { timer } from "./_timer";
-import { setStepCounter } from "./_scoreCounter";
-import { getScoreCounter } from "./_scoreCounter";
+import { restart } from "./_restart";
 
 // create game field
 export function createBoard() {
@@ -11,8 +10,10 @@ export function createBoard() {
   const body = document.querySelector("body");
   const gameBoard = document.querySelector(".game-board__wrapper");
   const startPlayButton = document.querySelector(".start-play");
+  const playAgainButton = document.querySelector(".start-playAgain");
   const startWindow = document.querySelector(".start-window");
-  const cardData = getRandomPicture();
+  const scoreWindow = document.querySelector(".result-window");
+  let cardData = getRandomPicture();
 
   const createFieldCard = (element) => {
     const card = document.createElement("div");
@@ -45,4 +46,9 @@ export function createBoard() {
   //set listener
   startPlayButton.addEventListener("click", startPlay);
   cardData.forEach((element) => createFieldCard(element));
+  playAgainButton.addEventListener("click", () => {
+    scoreWindow.classList.add("hidden");
+    restart();
+    startPlay();
+  });
 }
