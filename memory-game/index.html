@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<body>
+<body class="body_lock">
   <header class="header">
     <div class="wrapper header__wrapper">
       <div class="header__logo logo">
@@ -19,11 +19,24 @@
         <h2 class="logo__text">MEMORY GAME</h2>
       </div>
 
-      <div id="state">
-        <span id="time">0</span>
-        <span id="score">0</span>
-      </div>
-      
+      <div class="score-block">
+        <div class="time">
+          <p class="title">Time:
+            <span class="time_counter">00.00</span>
+          </p>          
+        </div>
+        <div class="step">
+          <p class="title">Step:
+            <span class="step_counter">0</span>
+          </p>          
+        </div>
+
+        <div class="score">
+          <p class="title">Score:
+            <span class="score_counter">0</span>
+          </p>          
+        </div>
+      </div>     
       
     </div>   
 
@@ -33,14 +46,29 @@
       <div class="wrapper game-board__wrapper"></div>
     </section>
 
-    <section id="post" class="hidden">
-      <div>
-        <h2>BRAVO !</h2>
-        <p id="final"></p>
-        <br>
-        <p>
-          <a id="again">Play Again !</a>
-        </p>
+    <section id="start">
+      <div class="start-window">
+        <h2 class="hello-text">Hello</h2>
+        <p>Enter start to play</p>
+        <button class="button start-play">start</button>
+      </div>
+    </section>    
+
+    <section id="result" >
+      <div class="result-window hidden">
+        <h3 class="result-text">You finish game
+          <p class="">Score:
+            <span class="final-score"></span>
+          </p>               
+          <p class="">Time:
+            <span class="final-time"></span>
+          </p>
+          <p class="">Steps:
+            <span class="final-steps"></span>
+          </p>
+        </h3> 
+        <p>Enter start to play again</p>
+        <button class="button start-playAgain">start again</button>
       </div>
     </section>
 
