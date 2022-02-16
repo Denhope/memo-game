@@ -1,4 +1,4 @@
-.start-window {
+.result-window {
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -12,11 +12,9 @@
   padding: 2%;
   border-radius: 10%;
   @extend %transition;
-  // .__hidden {
-  //   display: none;
-  // }
 }
-.start-window__hidden {
-  display: none;
+
+.hidden {
   @extend %transition;
+  display: none;
 }
