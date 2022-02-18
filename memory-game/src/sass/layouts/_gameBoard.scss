@@ -1,24 +1,11 @@
+.main__wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  position: relative;
+}
 .game-board__field {
-  width: 940px;
-  height: 850px;
-  @include media-tablet {
-    width: 650px;
-    height: 750px;
-  }
-  @include media-mobile {
-    width: 380px;
-    height: 430px;
-  }
-  @include media-mobile-medium {
-    width: 335px;
-    height: 400px;
-  }
-  @include media-mobile-small {
-    width: 260px;
-    height: 240px;
-  }
-
-  // width: 85%;
+  max-width: 100%;
 
   background: linear-gradient(125deg, rgb(40, 2, 40), rgb(130, 106, 106) 81%);
   padding: 1rem;
@@ -28,28 +15,12 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  align-content: center;
   gap: 2rem;
 
   pointer-events: none;
 }
-//
-// .game-board__field {
-//   display: grid;
-//   position: fixed;
-//   left: 50%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-//   justify-content: center;
-//   pointer-events: none;
-//   grid-gap: 1rem;
-//   grid-template-columns: repeat(5, 22rem);
-//   grid-template-rows: repeat(4, 22rem);
-//   // perspective: 800px;
-// }
+
 .picture,
 .backside {
   width: 100%;
@@ -80,7 +51,6 @@
     height: 3rem;
   }
 
-  // pointer-events: auto;
   position: relative;
   @extend %transition;
   box-shadow: $color-fill;
@@ -91,16 +61,12 @@
   }
 }
 .backside {
-  // @extend %transition;
   backface-visibility: hidden;
   background: linear-gradient(209deg, #f2e8ee, #dfbaba 81%);
   &:hover {
     background: $color-blacgraund-header;
     @extend %transition;
   }
-}
-.picture {
-  // display: none;
 }
 
 .card__toggle {
