@@ -43,7 +43,7 @@ p {
   @extend %font;
   text-align: center;
   margin: 0;
-  @include media-tablet {
+  @include media-mobile {
     line-height: 2.4rem;
   }
 }

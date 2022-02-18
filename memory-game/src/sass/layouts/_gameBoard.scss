@@ -9,6 +9,15 @@
     width: 380px;
     height: 430px;
   }
+  @include media-mobile-medium {
+    width: 335px;
+    height: 400px;
+  }
+  @include media-mobile-small {
+    width: 260px;
+    height: 240px;
+  }
+
   // width: 85%;
 
   background: linear-gradient(125deg, rgb(40, 2, 40), rgb(130, 106, 106) 81%);
@@ -61,6 +70,18 @@
   @include media-mobile {
     width: 6rem;
     height: 6rem;
+    // @media (orientation: landscape) {
+    //   width: 6rem;
+    //   height: 6rem;
+    // }
+  }
+  @include media-mobile-medium {
+    width: 5rem;
+    height: 5rem;
+  }
+  @include media-mobile-small {
+    width: 3rem;
+    height: 3rem;
   }
 
   // pointer-events: auto;

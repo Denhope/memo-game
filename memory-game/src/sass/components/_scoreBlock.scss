@@ -8,6 +8,10 @@
   @include media-mobile {
     gap: 4px;
   }
+  @include media-mobile-small {
+    display: none;
+  }
+
   .title {
     width: 150px;
     display: flex;

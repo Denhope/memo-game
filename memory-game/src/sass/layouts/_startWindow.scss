@@ -7,7 +7,14 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
+  width: 35%;
+  @include media-mobile {
+    width: 75%;
+  }
+  @include media-mobile-small {
+    width: 60%;
+  }
+
   height: auto;
   z-index: 1000;
   background: linear-gradient(125deg, rgb(40, 2, 40), rgb(130, 106, 106) 81%);
