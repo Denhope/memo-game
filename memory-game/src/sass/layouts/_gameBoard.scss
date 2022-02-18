@@ -1,22 +1,46 @@
-// .game-board__wrapper {
-//   // margin: auto;
-//   display: flex;
-//   justify-content: center;
-//   flex-wrap: wrap;
-//   gap: 20px;
-//   pointer-events: none;
-// }
-//
-.game-board__wrapper {
-  // margin: 0 auto;
-  display: grid;
-  justify-content: center;
+.game-board__field {
+  width: 840px;
+  height: 680px;
+  @include media-tablet {
+    width: 650px;
+    height: 750px;
+  }
+  @include media-mobile {
+    width: 380px;
+    height: 430px;
+  }
+  // width: 85%;
+
+  background: linear-gradient(125deg, rgb(40, 2, 40), rgb(130, 106, 106) 81%);
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 12px 15px 20px 0 rgb(46 61 73 / 50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  gap: 2rem;
+
   pointer-events: none;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(5, 12rem);
-  grid-template-rows: repeat(4, 12rem);
-  // perspective: 800px;
 }
+//
+// .game-board__field {
+//   display: grid;
+//   position: fixed;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+//   justify-content: center;
+//   pointer-events: none;
+//   grid-gap: 1rem;
+//   grid-template-columns: repeat(5, 22rem);
+//   grid-template-rows: repeat(4, 22rem);
+//   // perspective: 800px;
+// }
 .picture,
 .backside {
   width: 100%;
@@ -28,8 +52,17 @@
   pointer-events: none;
 }
 .card {
-  // width: 200px;
-  // height: 200px;
+  height: 14rem;
+  width: 14rem;
+  @include media-tablet {
+    width: 12rem;
+    height: 12rem;
+  }
+  @include media-mobile {
+    width: 6rem;
+    height: 6rem;
+  }
+
   // pointer-events: auto;
   position: relative;
   @extend %transition;
@@ -43,7 +76,7 @@
 .backside {
   // @extend %transition;
   backface-visibility: hidden;
-  background: $color-text;
+  background: linear-gradient(209deg, #f2e8ee, #dfbaba 81%);
   &:hover {
     background: $color-blacgraund-header;
     @extend %transition;

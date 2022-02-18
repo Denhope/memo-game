@@ -1,16 +1,22 @@
 .button {
-  min-width: 220px;
+  min-width: 200px;
   padding: 6px 0px;
   font-family: Inter;
+  border-radius: 10px;
+  background: linear-gradient(209deg, #f2e8ee, #dfbaba 81%);
   @include font(2rem, 4rem, $wight: normal);
   cursor: pointer;
   text-align: center;
 
-  // background-color: transparent;
-  border: 2px solid $violet;
   color: $blackMat;
   &:hover {
-    color: $color-hovered;
+    background: linear-gradient(
+      125deg,
+      rgb(66, 51, 66),
+      rgb(130, 106, 106) 81%
+    );
+    box-shadow: 12px 15px 20px 0 rgb(46 61 73 / 50%);
+    color: $white;
   }
   @extend %transition;
   &_active {
