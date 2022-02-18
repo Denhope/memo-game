@@ -6,13 +6,23 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 75%;
+  width: 15%;
+  @include media-laptop {
+    width: 35%;
+  }
+
+  @include media-mobile {
+    width: 60%;
+  }
+  @include media-mobile-small {
+    width: 50%;
+  }
   height: auto;
   z-index: 1000;
   background: linear-gradient(125deg, rgb(40, 2, 40), rgb(130, 106, 106) 81%);
   box-shadow: 12px 15px 20px 0 rgb(46 61 73 / 50%);
   padding: 2%;
-  border-radius: 10%;
+  border-radius: 1rem;
   @extend %transition;
 }
 

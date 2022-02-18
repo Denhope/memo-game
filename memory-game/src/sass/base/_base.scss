@@ -44,6 +44,7 @@ p {
   text-align: center;
   margin: 0;
   @include media-mobile {
+    @include font(1.5rem, 4rem, $wight: 300);
     line-height: 2.4rem;
   }
 }

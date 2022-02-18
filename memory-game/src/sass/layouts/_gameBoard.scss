@@ -1,6 +1,6 @@
 .game-board__field {
-  width: 840px;
-  height: 680px;
+  width: 940px;
+  height: 850px;
   @include media-tablet {
     width: 650px;
     height: 750px;
@@ -70,10 +70,6 @@
   @include media-mobile {
     width: 6rem;
     height: 6rem;
-    // @media (orientation: landscape) {
-    //   width: 6rem;
-    //   height: 6rem;
-    // }
   }
   @include media-mobile-medium {
     width: 5rem;
