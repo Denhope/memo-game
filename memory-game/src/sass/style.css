@@ -1,10 +1,24 @@
-.hidden, .result-window, .start-window__hidden, .start-window, .backside:hover, .card, .footer__copyright:hover, .copyright-rs a,
-.github a, .social a:hover, .logo img:hover, .logo, .button {
+.hidden,
+.result-window,
+.start-window__hidden,
+.start-window,
+.backside:hover,
+.card,
+.footer__copyright:hover,
+.copyright-rs a,
+.github a,
+.social a:hover,
+.logo img:hover,
+.logo,
+.button {
   transition: all 0.3s ease-out;
 }
 
 .copyright-rs a,
-.github a, p, h2, body {
+.github a,
+p,
+h2,
+body {
   font-family: "Inter", sans-serif;
 }
 
@@ -274,9 +288,9 @@ select {
  *    `input` and others.
  */
 button,
-html input[type=button],
-input[type=reset],
-input[type=submit] {
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -315,8 +329,8 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-input[type=checkbox],
-input[type=radio] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -328,8 +342,8 @@ input[type=radio] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -338,7 +352,7 @@ input[type=number]::-webkit-outer-spin-button {
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
-input[type=search] {
+input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
@@ -352,7 +366,7 @@ input[type=search] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type=search]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -543,7 +557,8 @@ p {
   fill: #1c1c1c;
 }
 .logo img:hover {
-  filter: invert(0%) sepia(6%) saturate(1898%) hue-rotate(316deg) brightness(70%) contrast(78%);
+  filter: invert(0%) sepia(6%) saturate(1898%) hue-rotate(316deg)
+    brightness(70%) contrast(78%);
 }
 
 .footer__wrapper {
@@ -586,7 +601,8 @@ p {
   cursor: pointer;
 }
 .social a:hover {
-  filter: invert(0%) sepia(6%) saturate(1898%) hue-rotate(316deg) brightness(70%) contrast(78%);
+  filter: invert(0%) sepia(6%) saturate(1898%) hue-rotate(316deg)
+    brightness(70%) contrast(78%);
 }
 
 .copyright-rs a,
@@ -603,7 +619,7 @@ p {
 }
 @media (max-width: 768px) {
   .copyright-rs a,
-.github a {
+  .github a {
     line-height: 2.4rem;
   }
 }
@@ -612,14 +628,15 @@ p {
   width: 70px;
 }
 .footer__copyright:hover {
-  filter: invert(0%) sepia(6%) saturate(1898%) hue-rotate(316deg) brightness(70%) contrast(78%);
+  filter: invert(0%) sepia(6%) saturate(1898%) hue-rotate(316deg)
+    brightness(70%) contrast(78%);
 }
 
 .hidden {
   display: none;
 }
 
-.game-board__field {
+.game-board {
   width: 840px;
   height: 680px;
   background: linear-gradient(125deg, #280228, #826a6a 81%);
@@ -638,25 +655,25 @@ p {
   pointer-events: none;
 }
 @media (max-width: 768px) {
-  .game-board__field {
+  .game-board {
     width: 650px;
     height: 750px;
   }
 }
 @media (max-width: 426px) {
-  .game-board__field {
+  .game-board {
     width: 380px;
     height: 430px;
   }
 }
 @media (max-width: 376px) {
-  .game-board__field {
+  .game-board {
     width: 335px;
     height: 400px;
   }
 }
 @media (max-width: 320px) {
-  .game-board__field {
+  .game-board {
     width: 260px;
     height: 240px;
   }

@@ -7,7 +7,7 @@ import { stepCounterStart, stepCounterStop } from "./_stepCounter";
 import { scoreCounterStop } from "./_scoreCounter";
 
 const body = document.querySelector("body");
-const gameBoard = document.querySelector(".game-board__field");
+const gameBoard = document.querySelector(".game-board");
 const startPlayButton = document.querySelector(".start-play");
 const playAgainButton = document.querySelector(".start-playAgain");
 const startWindow = document.querySelector(".start-window");
