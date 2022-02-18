@@ -34,7 +34,8 @@ export const checkCards = (evt) => {
   if (taggleCard.length === 20) {
     scoreWindow.classList.remove("hidden");
     body.classList.add("body_lock");
-    clearInterval(timer);
+    timer.timerStop();
+    // clearInterval(timer);
     // time.innerHTML = "00.00";
   }
 };

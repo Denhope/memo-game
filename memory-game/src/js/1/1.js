@@ -1,9 +1,8 @@
 import { checkCards } from "./_gameLogic";
 import { getRandomPicture } from "./_data";
-
-import { restartGame } from "./_restart";
-import { timerStart, timerStop } from "./_timer";
-import { stepCounterStart } from "./_stepCounter";
+import { timer } from "./_timer";
+import { setStepCounter } from "./_scoreCounter";
+import { getScoreCounter } from "./_scoreCounter";
 
 // create game field
 export function createBoard() {
@@ -12,12 +11,10 @@ export function createBoard() {
   const body = document.querySelector("body");
   const gameBoard = document.querySelector(".game-board__wrapper");
   const startPlayButton = document.querySelector(".start-play");
-  const playAgainButton = document.querySelector(".start-playAgain");
   const startWindow = document.querySelector(".start-window");
-  const scoreWindow = document.querySelector(".result-window");
-  let cardData = getRandomPicture();
+  const cardData = getRandomPicture();
 
-  const createFieldCard = (element) => {
+  const createFieldCard = () => {
     const card = document.createElement("div");
     const picture = document.createElement("img");
     const backSide = document.createElement("div");
@@ -34,7 +31,6 @@ export function createBoard() {
     card.addEventListener("click", (evt) => {
       card.classList.toggle("card__toggle");
       checkCards(evt);
-      // stepCounterStart(1);
       steps++;
       stepCounter.innerHTML = steps;
     });
@@ -44,14 +40,9 @@ export function createBoard() {
     startWindow.classList.add("start-window__hidden");
     body.classList.remove("body_lock");
     gameBoard.style.pointerEvents = "auto";
-    timerStart(0);
+    timer();
   };
   //set listener
   startPlayButton.addEventListener("click", startPlay);
-  cardData.forEach((element) => createFieldCard(element));
-  playAgainButton.addEventListener("click", () => {
-    scoreWindow.classList.add("hidden");
-    restartGame();
-    startPlay();
-  });
+  cardData.forEach((element) => createFieldCard);
 }
