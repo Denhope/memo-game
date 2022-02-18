@@ -1,15 +1,14 @@
+import { scoreCounterHigh, scoreCounterLow } from "./_scoreCounter";
 import * as timer from "./_timer";
 
 export const checkCards = (evt) => {
   const clickedCard = evt.target;
   clickedCard.classList.add("active");
-  // const time = document.querySelector(".time_counter");
+
   const activeCards = document.querySelectorAll(".active");
   const taggleCard = document.querySelectorAll(".card__toggle");
   const scoreWindow = document.querySelector(".result-window");
   const body = document.querySelector("body");
-  let score = 0;
-  let winCard = 0;
 
   if (activeCards.length === 2) {
     if (
@@ -17,7 +16,8 @@ export const checkCards = (evt) => {
       activeCards[0].getAttribute("data-name") ===
       activeCards[1].getAttribute("data-name")
     ) {
-      score = score + 2;
+      scoreCounterHigh();
+      // score = score + 2;
       activeCards.forEach((item) => {
         item.style.pointerEvents = "none";
         item.classList.remove("active");
@@ -28,6 +28,7 @@ export const checkCards = (evt) => {
         item.classList.remove("active");
         setTimeout(() => item.classList.remove("card__toggle"), 900);
       });
+      scoreCounterLow();
     }
   }
   //win
@@ -35,7 +36,5 @@ export const checkCards = (evt) => {
     scoreWindow.classList.remove("hidden");
     body.classList.add("body_lock");
     timer.timerStop();
-    // clearInterval(timer);
-    // time.innerHTML = "00.00";
   }
 };

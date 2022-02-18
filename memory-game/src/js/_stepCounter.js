@@ -1,16 +1,17 @@
 const stepCounterField = document.querySelector(".step_counter");
-// let steps = 0;
-let steps_str = "";
-const stepCounterStart = (steps) => {
-  // let steps = 0;
-  steps = steps + 1;
-  steps_str = `${steps}`;
+const stepCounterResult = document.querySelector(".final-steps");
+let steps = 0;
 
-  stepCounterField.innerHTML = steps_str;
+const stepCounterStart = () => {
+  steps++;
+  stepCounterField.innerHTML = steps;
+  stepCounterResult.innerHTML = steps;
+  return steps;
 };
-// const stepCounterSop = (steps) => {
-//   steps++;
-//   stepCounterField.innerHTML = steps;
-// };
 
-export { stepCounterStart };
+const stepCounterStop = () => {
+  steps = 0;
+  stepCounterField.innerHTML = steps;
+};
+
+export { stepCounterStart, stepCounterStop };

@@ -1,5 +1,4 @@
 import { getRandomPicture } from "./_data";
-import { timerStop } from "./_timer";
 export const restartGame = () => {
   let openCards = document.querySelectorAll(".card__toggle");
   let pictures = document.querySelectorAll(".picture");
@@ -15,5 +14,4 @@ export const restartGame = () => {
     pictures[index].src = element.imgSrc;
     cards[index].setAttribute("data-name", element.name);
   });
-  // timerStop();
 };
