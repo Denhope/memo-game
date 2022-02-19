@@ -4,12 +4,12 @@ import * as timer from "./_timer";
 export const checkCards = (evt) => {
   const clickedCard = evt.target;
   clickedCard.classList.add("active");
-
+  //constants
   const activeCards = document.querySelectorAll(".active");
   const taggleCard = document.querySelectorAll(".card__toggle");
   const scoreWindow = document.querySelector(".result-window");
   const body = document.querySelector("body");
-
+  //check logic
   if (activeCards.length === 2) {
     if (
       //same cards

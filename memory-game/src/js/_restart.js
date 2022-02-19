@@ -1,4 +1,6 @@
 import { getRandomPicture } from "./_data";
+
+// restart game function
 export const restartGame = () => {
   let openCards = document.querySelectorAll(".card__toggle");
   let pictures = document.querySelectorAll(".picture");

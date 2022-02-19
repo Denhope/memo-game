@@ -1,19 +1,19 @@
 import { checkCards } from "./_gameLogic";
 import { getRandomPicture } from "./_data";
 import { restartGame } from "./_restart";
-import { timerStart, timerStop } from "./_timer";
+import { timerStart } from "./_timer";
 import { stepCounterStart, stepCounterStop } from "./_stepCounter";
-
 import { scoreCounterStop } from "./_scoreCounter";
 
+// constants
 const body = document.querySelector("body");
 const gameBoard = document.querySelector(".game-board");
 const startPlayButton = document.querySelector(".start-play");
 const playAgainButton = document.querySelector(".start-playAgain");
 const startWindow = document.querySelector(".start-window");
 const resultGameWindow = document.querySelector(".result-window");
-// const scoreWindow = document.querySelector(".result-window");
 let cardData = getRandomPicture();
+
 // create cards field
 const createCard = (item) => {
   const card = document.createElement("div");

@@ -1,10 +1,11 @@
-let minutes = 0;
+//constants
 const timeCounterField = document.querySelector(".time_counter");
 const timeCounterResult = document.querySelector(".final-time");
 let seconds_str = "";
 let minutes_str = "";
 let timerStartID;
 
+// time functions
 const timerStart = (seconds, minutes) => {
   timerStartID = setInterval(() => {
     seconds > 58 ? ((minutes += 1), (seconds = 0)) : (seconds += 1);
