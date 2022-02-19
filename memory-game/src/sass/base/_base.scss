@@ -30,6 +30,10 @@ body {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 h2 {
   margin: 0;
   @include font(4rem, 8rem);
