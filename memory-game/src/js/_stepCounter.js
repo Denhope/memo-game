@@ -6,7 +6,7 @@ const stepCounterStart = () => {
   steps++;
   stepCounterField.innerHTML = steps;
   stepCounterResult.innerHTML = steps;
-  return steps;
+  return steps + 1;
 };
 
 const stepCounterStop = () => {

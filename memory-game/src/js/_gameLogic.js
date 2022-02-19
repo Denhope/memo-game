@@ -1,4 +1,6 @@
 import { scoreCounterHigh, scoreCounterLow } from "./_scoreCounter";
+import { stepCounterStart } from "./_stepCounter";
+import { createPlayerResult, Player, resArray } from "./_storage";
 import * as timer from "./_timer";
 
 export const checkCards = (evt) => {
@@ -9,15 +11,19 @@ export const checkCards = (evt) => {
   const taggleCard = document.querySelectorAll(".card__toggle");
   const scoreWindow = document.querySelector(".result-window");
   const body = document.querySelector("body");
-  //check logic
+
+  let timerStorage = document.querySelector(".final-time").innerHTML;
+
+  // check logic
   if (activeCards.length === 2) {
+    // console.log(player);
     if (
       //same cards
       activeCards[0].getAttribute("data-name") ===
       activeCards[1].getAttribute("data-name")
     ) {
       scoreCounterHigh();
-      // score = score + 2;
+
       activeCards.forEach((item) => {
         item.style.pointerEvents = "none";
         item.classList.remove("active");
@@ -36,5 +42,15 @@ export const checkCards = (evt) => {
     scoreWindow.classList.remove("hidden");
     body.classList.add("body_lock");
     timer.timerStop();
+
+    // creare obj
+    createPlayerResult();
+    //ad to array
+    if (resArray.length <= 9) {
+      resArray.push(createPlayerResult());
+    } else if (resArray.length >= 9) {
+      resArray.pop();
+      resArray.unshift(createPlayerResult());
+    }
   }
 };

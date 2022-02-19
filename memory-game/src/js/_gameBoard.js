@@ -4,6 +4,7 @@ import { restartGame } from "./_restart";
 import { timerStart } from "./_timer";
 import { stepCounterStart, stepCounterStop } from "./_stepCounter";
 import { scoreCounterStop } from "./_scoreCounter";
+import { resArray } from "./_storage";
 
 // constants
 const body = document.querySelector("body");
@@ -54,11 +55,11 @@ startPlayButton.addEventListener("click", function () {
 //playAgain
 playAgainButton.addEventListener("click", () => {
   resultGameWindow.classList.add("hidden");
-
   restartGame();
   startPlay();
   stepCounterStop();
   scoreCounterStop();
+  console.log(resArray);
 });
 
 export { createCard, startPlay };

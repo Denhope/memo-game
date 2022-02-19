@@ -14,8 +14,10 @@ const timerStart = (seconds, minutes) => {
     timeCounterField.innerHTML = `${minutes_str}:${seconds_str}`;
     timeCounterResult.innerHTML = `${minutes_str}:${seconds_str}`;
   }, 1000);
+  return timerStartID;
 };
 const timerStop = () => {
   clearInterval(timerStartID);
+  return timerStartID;
 };
 export { timerStart, timerStop };
