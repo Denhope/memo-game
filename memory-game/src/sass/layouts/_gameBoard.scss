@@ -7,10 +7,10 @@
 .game-board {
   max-width: 100%;
 
-  background: linear-gradient(125deg, rgb(40, 2, 40), rgb(130, 106, 106) 81%);
+  background: $background-game-board;
   padding: 1rem;
   border-radius: 1rem;
-  box-shadow: 12px 15px 20px 0 rgb(46 61 73 / 50%);
+  box-shadow: $shadow;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -27,7 +27,7 @@
   height: 100%;
 
   // cursor: pointer;
-  border-radius: 10%;
+  border-radius: 1rem;
   position: absolute;
   pointer-events: none;
 }
@@ -53,18 +53,17 @@
 
   position: relative;
   @extend %transition;
-  box-shadow: $color-fill;
+  box-shadow: $shadow;
   transform-style: preserve-3d;
   cursor: pointer;
   &:hover {
-    box-shadow: 1px 0px 10px 10px rgb(16 17 17 / 35%);
+    box-shadow: $shodow-dark;
   }
 }
 .backside {
   backface-visibility: hidden;
-  background: linear-gradient(209deg, #f2e8ee, #dfbaba 81%);
+  background: $background-card;
   &:hover {
-    background: $color-blacgraund-header;
     @extend %transition;
   }
 }

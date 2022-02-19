@@ -1,12 +1,12 @@
 .score-block {
   display: flex;
   // border: 2px solid $white;
-  background: linear-gradient(125deg, rgb(40, 2, 40), rgb(130, 106, 106) 81%);
-  box-shadow: 12px 15px 20px 0 rgb(46 61 73 / 50%);
-  border-radius: 10px;
-  gap: 10px;
+  background: $background-score-block;
+  box-shadow: $shadow;
+  border-radius: 1rem;
+  gap: 1rem;
   @include media-mobile {
-    gap: 4px;
+    gap: 0.4rem;
   }
   @include media-mobile-small {
     display: none;

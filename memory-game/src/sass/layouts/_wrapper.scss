@@ -1,7 +1,7 @@
 .wrapper {
   max-width: $content-width;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 2rem;
 
   @include media-tablet {
     max-width: $tablet-width;

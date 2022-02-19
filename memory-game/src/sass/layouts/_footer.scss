@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 8px 20px;
-  // background-color: $color-blacgraund-footer;
+
   @include media-tablet {
     flex-direction: column;
     row-gap: 8px;

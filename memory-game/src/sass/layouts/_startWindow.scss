@@ -14,8 +14,8 @@
 
   height: auto;
   z-index: 1000;
-  background: linear-gradient(125deg, rgb(40, 2, 40), rgb(130, 106, 106) 81%);
-  box-shadow: 12px 15px 20px 0 rgb(46 61 73 / 50%);
+  background: $background-start-window;
+  box-shadow: $shadow;
   padding: 2%;
   border-radius: 1rem;
   @extend %transition;

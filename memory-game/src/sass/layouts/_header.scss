@@ -5,24 +5,24 @@
   align-items: center;
   min-height: 10rem;
   gap: 2rem;
-
+  padding-top: 2rem;
   @include media-mobile {
     align-items: stretch;
   }
 }
 
-.logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+// .logo {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   gap: 2rem;
 
-  @extend %transition;
-  img {
-    fill: $color-fill;
-    &:hover {
-      @extend %transition;
-      filter: $hover;
-    }
-  }
-}
+//   @extend %transition;
+//   img {
+//     fill: $color-fill;
+//     &:hover {
+//       @extend %transition;
+//       filter: $hover;
+//     }
+//   }
+// }
