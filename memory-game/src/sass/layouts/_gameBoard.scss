@@ -54,6 +54,7 @@
   cursor: pointer;
   &:hover {
     box-shadow: $shodow-dark;
+    border-radius: 10%;
   }
 }
 .backside {
