@@ -5,7 +5,7 @@ let seconds_str = "";
 let minutes_str = "";
 let timerStartID;
 
-const timerStart = (seconds) => {
+const timerStart = (seconds, minutes) => {
   timerStartID = setInterval(() => {
     seconds > 58 ? ((minutes += 1), (seconds = 0)) : (seconds += 1);
     seconds_str = seconds > 9 ? `${seconds}` : `0${seconds}`;

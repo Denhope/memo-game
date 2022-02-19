@@ -42,7 +42,7 @@ const startPlay = () => {
   startWindow.classList.add("start-window__hidden");
   body.classList.remove("body_lock");
   gameBoard.style.pointerEvents = "auto";
-  timerStart(0);
+  timerStart(0, 0);
 };
 
 //set listener
