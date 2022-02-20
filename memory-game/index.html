@@ -38,9 +38,7 @@
         </div>
         <button class="button result-score_button">Results</button>
 
-      </div>     
-
-     
+      </div>         
       
     </div>   
 
@@ -54,15 +52,16 @@
       <section id="start">
         <div class="start-window">
           <h2 class="hello-text">Hello!</h2>
-          <p>Enter name and click Start</p>
+          <p>Enter name and start the game</p>
+          
           <input  class ="player-name" id="player-name" type="text" placeholder="Enter name" autofocus>          
           <button class="button start-play">Start</button>          
         </div>
       </section>    
 
       <section id="result" >
-        <div class="result-window hidden">
-          <h2 class="result-text">Game Over!
+        <div class="result-window result-window_hidden">
+          <h2 class="result__text">Game Over!
             <p class="title">Score:
               <span class="final-score"></span>
             </p>               
@@ -77,6 +76,18 @@
           <button class="button start-playAgain">Play again</button>
         </div>
       </section>
+
+      <section id="games-results" >
+        <div class="games-results-window games-results-window_hidden">
+          <p class="games-results-window__text">Game results</p>
+          <table class="results-game"></table>
+<!--           
+          <p>Close</p>
+          <button class="button close-result-window">close</button> -->
+        </div>
+      </section>
+
+
     </div>
 
   </main>

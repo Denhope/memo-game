@@ -1,0 +1,66 @@
+.games-results-window {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  cursor: pointer;
+  left: 50%;
+  // top: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  @include media-laptop {
+    width: 45%;
+  }
+  @include media-mobile {
+    width: 69%;
+  }
+
+  height: auto;
+  gap: 1rem;
+  z-index: 1000;
+  background: $background-start-window;
+  box-shadow: $shadow;
+  padding: 2%;
+  border-radius: 1rem;
+}
+.games-results-window_hidden {
+  @extend %transition;
+  display: none;
+}
+
+td {
+  border: 1px solid #000;
+  padding: 5px;
+  background: #d8e6f3;
+}
+
+td:first-child {
+  text-align: left;
+}
+.results-game {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 1.5rem;
+  // border-radius: 20px;
+  border-spacing: 0;
+  text-align: center;
+}
+
+td {
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  // border-color: white;
+}
+
+td:first-child {
+  text-align: left;
+}
+
+td {
+  padding: 1rem 1rem;
+  background: $lilow;
+}
+
+tr td:last-child {
+  border-right: none;
+}

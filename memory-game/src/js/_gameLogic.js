@@ -1,9 +1,13 @@
+// import { resArray } from "./_gamesResultsjs";
+import { creareResultTabble } from "./_gamesResults";
 import { scoreCounterHigh, scoreCounterLow } from "./_scoreCounter";
-import { stepCounterStart } from "./_stepCounter";
-import { createPlayerResult, Player, resArray } from "./_storage";
+// import { stepCounterStart } from "./_stepCounter";
+import { createPlayerResult } from "./_gamesResults";
 import * as timer from "./_timer";
+import { resArray } from "./_storage";
 
-export const checkCards = (evt) => {
+// let resArray = [];
+const checkCards = (evt) => {
   const clickedCard = evt.target;
   clickedCard.classList.add("active");
   //constants
@@ -11,8 +15,7 @@ export const checkCards = (evt) => {
   const taggleCard = document.querySelectorAll(".card__toggle");
   const scoreWindow = document.querySelector(".result-window");
   const body = document.querySelector("body");
-
-  let timerStorage = document.querySelector(".final-time").innerHTML;
+  const buttonResult = document.querySelector(".result-score_button");
 
   // check logic
   if (activeCards.length === 2) {
@@ -39,18 +42,20 @@ export const checkCards = (evt) => {
   }
   //win
   if (taggleCard.length === 20) {
-    scoreWindow.classList.remove("hidden");
+    // let resArray = [];
+    scoreWindow.classList.remove("result-window_hidden");
+    buttonResult.style.pointerEvents = "auto";
     body.classList.add("body_lock");
     timer.timerStop();
 
-    // creare obj
-    createPlayerResult();
-    //ad to array
     if (resArray.length <= 9) {
       resArray.push(createPlayerResult());
     } else if (resArray.length >= 9) {
       resArray.pop();
       resArray.unshift(createPlayerResult());
     }
+    // creareResultTabble();
+    console.log(resArray);
   }
 };
+export { checkCards };

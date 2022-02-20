@@ -20,24 +20,21 @@
   padding: 2%;
   border-radius: 1rem;
   @extend %transition;
-  // .__hidden {
-  //   display: none;
-  // }
 }
 
 input {
-  // -webkit-appearance: none;
   cursor: pointer;
   color: $color-text-light;
   width: 75%;
   line-height: 4rem;
   border-radius: 1rem;
+  padding: 0 1rem;
   @include media-mobile {
     line-height: 2.5rem;
   }
 }
 
-.start-window__hidden {
+.start-window_hidden {
   display: none;
   @extend %transition;
 }

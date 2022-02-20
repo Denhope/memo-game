@@ -16,4 +16,5 @@ export const restartGame = () => {
     pictures[index].src = element.imgSrc;
     cards[index].setAttribute("data-name", element.name);
   });
+  location.reload();
 };
