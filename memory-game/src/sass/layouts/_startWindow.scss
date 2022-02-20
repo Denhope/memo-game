@@ -13,6 +13,7 @@
   }
 
   height: auto;
+  gap: 1rem;
   z-index: 1000;
   background: $background-start-window;
   box-shadow: $shadow;
@@ -23,6 +24,19 @@
   //   display: none;
   // }
 }
+
+input {
+  // -webkit-appearance: none;
+  cursor: pointer;
+  color: $color-text-light;
+  width: 75%;
+  line-height: 4rem;
+  border-radius: 1rem;
+  @include media-mobile {
+    line-height: 2.5rem;
+  }
+}
+
 .start-window__hidden {
   display: none;
   @extend %transition;

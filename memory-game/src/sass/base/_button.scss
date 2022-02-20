@@ -1,11 +1,12 @@
 .button {
-  width: 75%;
+  width: 45%;
   height: auto;
   padding: 0.6rem 0;
   font-family: Inter;
   border-radius: 1rem;
   background: $shadow;
   @include font(2rem, 4rem, $wight: normal);
+
   cursor: pointer;
   text-align: center;
   color: $blackMat;
@@ -20,5 +21,20 @@
     &:hover {
       color: $background-button-hovered;
     }
+  }
+  @include media-mobile {
+    @include font(1.5rem, 1.5rem, $wight: normal);
+    color: $blackMat;
+  }
+}
+
+.result-score_button {
+  // border-radius: 50%;
+  @include font(2rem, 2rem, $wight: normal);
+  padding: 0.5rem;
+  color: $blackMat;
+  @include media-mobile {
+    @include font(1.5rem, 1.5rem, $wight: normal);
+    color: $blackMat;
   }
 }

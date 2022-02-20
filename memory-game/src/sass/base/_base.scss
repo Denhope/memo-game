@@ -45,12 +45,12 @@ h2 {
 }
 
 p {
-  @include font(2rem, 5rem, $wight: 400);
+  @include font(2rem, 2.5rem, $wight: 400);
   @extend %font;
   text-align: center;
   margin: 0;
   @include media-mobile {
-    @include font(1.5rem, 4rem, $wight: 300);
-    line-height: 4rem;
+    @include font(1.5rem, 2rem, $wight: 300);
+    // line-height: 4rem;
   }
 }
