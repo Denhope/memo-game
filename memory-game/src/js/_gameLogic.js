@@ -44,7 +44,7 @@ const checkCards = (evt) => {
   if (taggleCard.length === 20) {
     // let resArray = [];
     scoreWindow.classList.remove("result-window_hidden");
-    buttonResult.style.pointerEvents = "auto";
+    // buttonResult.style.pointerEvents = "auto";
     body.classList.add("body_lock");
     timer.timerStop();
 
