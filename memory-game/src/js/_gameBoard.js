@@ -13,6 +13,8 @@ const startPlayButton = document.querySelector(".start-play");
 const playAgainButton = document.querySelector(".start-playAgain");
 const startWindow = document.querySelector(".start-window");
 const resultGameWindow = document.querySelector(".result-window");
+const playerName = document.querySelector(".player-name");
+const timeCounterField = document.querySelector(".time_counter");
 let cardData = getRandomPicture();
 
 // create cards field
@@ -39,27 +41,26 @@ const createCard = (item) => {
 
 cardData.forEach((element) => createCard(element));
 
-const startPlay = () => {
-  startWindow.classList.add("start-window__hidden");
-  body.classList.remove("body_lock");
-  gameBoard.style.pointerEvents = "auto";
-  timerStart(0, 0);
-};
-
-//set listener
 //startPlay
-startPlayButton.addEventListener("click", function () {
-  startPlay();
-});
+const startPlay = () => {
+  if (playerName.value.length !== 0) {
+    startWindow.classList.add("start-window__hidden");
+    body.classList.remove("body_lock");
+    gameBoard.style.pointerEvents = "auto";
+    timerStart(0, 0);
+  }
+};
+startPlayButton.addEventListener("click", startPlay);
 
 //playAgain
-playAgainButton.addEventListener("click", () => {
+const playAgain = () => {
   resultGameWindow.classList.add("hidden");
-  restartGame();
-  startPlay();
   stepCounterStop();
   scoreCounterStop();
-  console.log(resArray);
-});
+  timeCounterField.innerHTML = "00.00";
+  startWindow.classList.remove("start-window__hidden");
+  restartGame();
+};
+playAgainButton.addEventListener("click", playAgain);
 
 export { createCard, startPlay };

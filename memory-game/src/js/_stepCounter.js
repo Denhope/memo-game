@@ -1,7 +1,7 @@
 const stepCounterField = document.querySelector(".step_counter");
 const stepCounterResult = document.querySelector(".final-steps");
 let steps = 0;
-
+//step counter functions
 const stepCounterStart = () => {
   steps++;
   stepCounterField.innerHTML = steps;

@@ -1,11 +1,10 @@
 // constract Object
 
-import { scoreCounterHigh } from "./_scoreCounter";
+// import { scoreCounterHigh } from "./_scoreCounter";
 import { stepCounterStart } from "./_stepCounter";
-import { timerStop } from "./_timer";
+// import { timerStop } from "./_timer";
 
-// let scoreStorge = document.querySelector(".score_counter").innerHTML;
-// let stepsStorage = document.querySelector(".final-steps").innerHTML;
+let scoreStorge = document.querySelector(".final-score");
 let timerStorage = document.querySelector(".final-time");
 let resArray = [];
 
@@ -21,13 +20,29 @@ class Player {
 
 const createPlayerResult = () => {
   let player = new Player(
-    "polina",
-    scoreCounterHigh().toString(),
+    document.getElementById("player-name").value,
+    scoreStorge.textContent,
     timerStorage.textContent,
-    // timerStop().toString(),
     stepCounterStart().toString()
   );
   return player;
 };
+
+//Local storage
+function setLocalStorage() {
+  localStorage.setItem("resultGames", JSON.stringify(resArray));
+}
+
+function getLocalStorage() {
+  if (localStorage.getItem("resultGames")) {
+    const res = localStorage.getItem("resultGames");
+    resArray = JSON.parse(res);
+  }
+  console.log(resArray);
+  return resArray;
+}
+
+window.addEventListener("load", getLocalStorage);
+window.addEventListener("beforeunload", setLocalStorage);
 
 export { Player, createPlayerResult, resArray };
