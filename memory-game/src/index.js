@@ -12,7 +12,6 @@ const startPlayButton = document.querySelector(".start-play");
 const buttonResult = document.querySelector(".result-score_button");
 const playAgainButton = document.querySelector(".start-playAgain");
 const resultGamesWindow = document.querySelector(".games-results-window");
-const card = document.querySelector(".card");
 
 // create board field
 let cardData = getRandomPicture();
@@ -22,6 +21,7 @@ cardData.forEach((element) => createCard(element));
 startPlayButton.addEventListener("click", startPlay);
 
 // open card
+const card = document.querySelector(".card");
 card.addEventListener("click", function (evt) {
   this.classList.toggle("card__toggle");
   //check cards

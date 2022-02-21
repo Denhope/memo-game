@@ -8,8 +8,6 @@ import { scoreCounterStop } from "./_scoreCounter";
 // constants
 const body = document.querySelector("body");
 const gameBoard = document.querySelector(".game-board");
-// const startPlayButton = document.querySelector(".start-play");
-// const playAgainButton = document.querySelector(".start-playAgain");
 const startWindow = document.querySelector(".start-window");
 const resultGameWindow = document.querySelector(".result-window");
 const playerName = document.querySelector(".player-name");
@@ -17,9 +15,7 @@ const timeCounterField = document.querySelector(".time_counter");
 const buttonResult = document.querySelector(".result-score_button");
 const resultGamesWindow = document.querySelector(".games-results-window");
 
-// let cardData = getRandomPicture();
-
-// create cards field
+// create cards function
 const createCard = (item) => {
   const card = document.createElement("div");
   const picture = document.createElement("img");
@@ -32,30 +28,9 @@ const createCard = (item) => {
   card.appendChild(backSide);
   card.setAttribute("data-name", item.name);
   picture.src = item.imgSrc;
-  // return card;
-  //click card
-  card.addEventListener("click", function (evt) {
-    this.classList.toggle("card__toggle");
-    //check cards
-    checkCards(evt);
-    //start step counter
-    stepCounterStart();
-  });
 };
 
-// const openCard = (card) => {
-//   card.addEventListener("click", function (evt) {
-//     this.classList.toggle("card__toggle");
-//     //check cards
-//     checkCards(evt);
-//     //start step counter
-//     stepCounterStart();
-//   });
-// };
-
-// cardData.forEach((element) => createCard(element));
-
-//startPlay function
+//start Play function
 const startPlay = () => {
   if (playerName.value.length !== 0) {
     startWindow.classList.add("start-window_hidden");
@@ -65,7 +40,6 @@ const startPlay = () => {
     timerStart(0, 0);
   }
 };
-// startPlayButton.addEventListener("click", startPlay);
 
 //playAgain function
 const playAgain = () => {
@@ -76,7 +50,6 @@ const playAgain = () => {
   startWindow.classList.remove("start-window_hidden");
   restartGame();
 };
-// playAgainButton.addEventListener("click", playAgain);
 
 //showResults functions
 const toggleGameResultsWindow = () => {
@@ -89,10 +62,6 @@ const closeGameResultsWindow = () => {
   resultGamesWindow.classList.add("games-results-window_hidden");
 };
 
-// buttonResult.addEventListener("click", function () {
-//   toggleGameResultsWindow();
-// });
-// resultGamesWindow.addEventListener("click", closeGameResultsWindow);
 export {
   createCard,
   startPlay,
