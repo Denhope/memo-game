@@ -30,7 +30,7 @@ const createCard = (item) => {
   card.setAttribute("data-name", item.name);
   picture.src = item.imgSrc;
 
-  //click card
+  // set listener click card
   card.addEventListener("click", function (evt) {
     this.classList.toggle("card__toggle");
     //check cards

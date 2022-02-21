@@ -23,14 +23,6 @@ cardData.forEach((element) => createCard(element));
 startPlayButton.addEventListener("click", startPlay);
 
 // open card
-// const card = document.querySelector(".card");
-// card.addEventListener("click", function (evt) {
-//   this.classList.toggle("card__toggle");
-//   //check cards
-//   checkCards(evt);
-//   //start step counter
-//   stepCounterStart();
-// });
 
 //playAgain
 playAgainButton.addEventListener("click", playAgain);
