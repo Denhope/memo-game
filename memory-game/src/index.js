@@ -6,7 +6,9 @@ import {
   startPlay,
   toggleGameResultsWindow,
 } from "./js/_gameBoard";
+import { checkCards } from "./js/_gameLogic";
 import { viewScor } from "./js/_score";
+import { stepCounterStart } from "./js/_stepCounter";
 
 const startPlayButton = document.querySelector(".start-play");
 const buttonResult = document.querySelector(".result-score_button");
@@ -21,14 +23,14 @@ cardData.forEach((element) => createCard(element));
 startPlayButton.addEventListener("click", startPlay);
 
 // open card
-const card = document.querySelector(".card");
-card.addEventListener("click", function (evt) {
-  this.classList.toggle("card__toggle");
-  //check cards
-  checkCards(evt);
-  //start step counter
-  stepCounterStart();
-});
+// const card = document.querySelector(".card");
+// card.addEventListener("click", function (evt) {
+//   this.classList.toggle("card__toggle");
+//   //check cards
+//   checkCards(evt);
+//   //start step counter
+//   stepCounterStart();
+// });
 
 //playAgain
 playAgainButton.addEventListener("click", playAgain);

@@ -1,5 +1,5 @@
 import { checkCards } from "./_gameLogic";
-// import { getRandomPicture } from "./_data";
+
 import { restartGame } from "./_restartGame";
 import { timerStart } from "./_timer";
 import { stepCounterStart, stepCounterStop } from "./_stepCounter";
@@ -8,6 +8,7 @@ import { scoreCounterStop } from "./_scoreCounter";
 // constants
 const body = document.querySelector("body");
 const gameBoard = document.querySelector(".game-board");
+
 const startWindow = document.querySelector(".start-window");
 const resultGameWindow = document.querySelector(".result-window");
 const playerName = document.querySelector(".player-name");
@@ -15,7 +16,7 @@ const timeCounterField = document.querySelector(".time_counter");
 const buttonResult = document.querySelector(".result-score_button");
 const resultGamesWindow = document.querySelector(".games-results-window");
 
-// create cards function
+// create cards field
 const createCard = (item) => {
   const card = document.createElement("div");
   const picture = document.createElement("img");
@@ -28,9 +29,19 @@ const createCard = (item) => {
   card.appendChild(backSide);
   card.setAttribute("data-name", item.name);
   picture.src = item.imgSrc;
+
+  //click card
+  card.addEventListener("click", function (evt) {
+    this.classList.toggle("card__toggle");
+    //check cards
+    checkCards(evt);
+    //start step counter
+    stepCounterStart();
+  });
 };
 
-//start Play function
+//
+//startPlay function
 const startPlay = () => {
   if (playerName.value.length !== 0) {
     startWindow.classList.add("start-window_hidden");
@@ -64,6 +75,7 @@ const closeGameResultsWindow = () => {
 
 export {
   createCard,
+  // openCard,
   startPlay,
   playAgain,
   toggleGameResultsWindow,
