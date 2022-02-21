@@ -4,7 +4,7 @@ import { resArray } from "./_storage";
 let scoreStorge = document.querySelector(".final-score");
 let timerStorage = document.querySelector(".final-time");
 
-//create obj
+//create Player
 class Player {
   constructor(name, score, time, steps) {
     this.name = name;
@@ -13,7 +13,7 @@ class Player {
     this.steps = steps;
   }
 }
-
+//game result function
 const createPlayerResult = () => {
   let player = new Player(
     document.getElementById("player-name").value,
@@ -25,8 +25,7 @@ const createPlayerResult = () => {
   return player;
 };
 
-document.querySelector(".results-game");
-
+// create result tabble function
 const creareResultTabble = () => {
   let userCount = resArray.length;
   let title = document.createElement("tr");

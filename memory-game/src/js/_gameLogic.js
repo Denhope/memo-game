@@ -3,16 +3,17 @@ import { createPlayerResult } from "./_gamesResults";
 import * as timer from "./_timer";
 import { resArray } from "./_storage";
 
+//check cards function
 const checkCards = (evt) => {
-  const clickedCard = evt.target;
-  clickedCard.classList.add("active");
   //constants
   const activeCards = document.querySelectorAll(".active");
   const taggleCard = document.querySelectorAll(".card__toggle");
   const scoreWindow = document.querySelector(".result-window");
   const body = document.querySelector("body");
+  const clickedCard = evt.target;
+  clickedCard.classList.add("active");
 
-  // check logic
+  // check card for counting result
   if (activeCards.length === 2) {
     // console.log(player);
     if (
@@ -35,7 +36,7 @@ const checkCards = (evt) => {
       scoreCounterLow();
     }
   }
-  //win
+  //win game
   if (taggleCard.length === 20) {
     scoreWindow.classList.remove("result-window_hidden");
     // buttonResult.style.pointerEvents = "auto";
