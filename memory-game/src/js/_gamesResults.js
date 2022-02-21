@@ -1,5 +1,4 @@
 import { stepCounterStart } from "./_stepCounter";
-// import { resArray } from "./_storage";
 
 let scoreStorge = document.querySelector(".final-score");
 let timerStorage = document.querySelector(".final-time");

@@ -45,6 +45,7 @@ const startPlay = () => {
     body.classList.remove("body_lock");
     gameBoard.style.pointerEvents = "auto";
     buttonResult.style.pointerEvents = "none";
+    restartGame();
     timerStart(0, 0);
   }
 };
@@ -56,17 +57,14 @@ const playAgain = () => {
   scoreCounterStop();
   timeCounterField.innerHTML = "00.00";
   startWindow.classList.remove("start-window_hidden");
-  restartGame();
 };
 
 //showResults functions
 const toggleGameResultsWindow = () => {
-  startWindow.classList.toggle("start-window_hidden");
   resultGamesWindow.classList.toggle("games-results-window_hidden");
 };
 
 const closeGameResultsWindow = () => {
-  startWindow.classList.remove("start-window_hidden");
   resultGamesWindow.classList.add("games-results-window_hidden");
 };
 

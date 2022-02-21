@@ -1,5 +1,5 @@
 import { scoreCounterHigh, scoreCounterLow } from "./_scoreCounter";
-import { creareResultTabble, createPlayerResult } from "./_gamesResults";
+import { createPlayerResult } from "./_gamesResults";
 import * as timer from "./_timer";
 import { resArray } from "./_storage";
 
@@ -31,7 +31,7 @@ const checkCards = (evt) => {
         gameBoard.style.pointerEvents = "auto";
       });
     } else {
-      //diferent cards
+      //different cards
       activeCards.forEach((item) => {
         item.classList.remove("active");
         setTimeout(() => {
@@ -47,6 +47,7 @@ const checkCards = (evt) => {
   if (taggleCard.length === 20) {
     scoreWindow.classList.remove("result-window_hidden");
     buttonResult.style.pointerEvents = "auto";
+    gameBoard.style.pointerEvents = "none";
     body.classList.add("body_lock");
     timer.timerStop();
 

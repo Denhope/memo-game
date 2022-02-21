@@ -6,10 +6,8 @@ import {
   startPlay,
   toggleGameResultsWindow,
 } from "./js/_gameBoard";
-import { checkCards } from "./js/_gameLogic";
 import { creareResultTabble } from "./js/_gamesResults";
 import { viewScor } from "./js/_score";
-import { stepCounterStart } from "./js/_stepCounter";
 import { resArray } from "./js/_storage";
 
 const startPlayButton = document.querySelector(".start-play");

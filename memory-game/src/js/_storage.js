@@ -13,7 +13,6 @@ function getLocalStorage() {
     creareResultTabble(resArray);
     console.log(`Game results:`);
     console.log(resArray);
-    // return resArray;
   }
 }
 
