@@ -1,5 +1,5 @@
 import { checkCards } from "./_gameLogic";
-import { getRandomPicture } from "./_data";
+// import { getRandomPicture } from "./_data";
 import { restartGame } from "./_restartGame";
 import { timerStart } from "./_timer";
 import { stepCounterStart, stepCounterStop } from "./_stepCounter";
@@ -8,8 +8,8 @@ import { scoreCounterStop } from "./_scoreCounter";
 // constants
 const body = document.querySelector("body");
 const gameBoard = document.querySelector(".game-board");
-const startPlayButton = document.querySelector(".start-play");
-const playAgainButton = document.querySelector(".start-playAgain");
+// const startPlayButton = document.querySelector(".start-play");
+// const playAgainButton = document.querySelector(".start-playAgain");
 const startWindow = document.querySelector(".start-window");
 const resultGameWindow = document.querySelector(".result-window");
 const playerName = document.querySelector(".player-name");
@@ -17,7 +17,7 @@ const timeCounterField = document.querySelector(".time_counter");
 const buttonResult = document.querySelector(".result-score_button");
 const resultGamesWindow = document.querySelector(".games-results-window");
 
-let cardData = getRandomPicture();
+// let cardData = getRandomPicture();
 
 // create cards field
 const createCard = (item) => {
@@ -32,18 +32,30 @@ const createCard = (item) => {
   card.appendChild(backSide);
   card.setAttribute("data-name", item.name);
   picture.src = item.imgSrc;
-
+  // return card;
   //click card
   card.addEventListener("click", function (evt) {
     this.classList.toggle("card__toggle");
+    //check cards
     checkCards(evt);
+    //start step counter
     stepCounterStart();
   });
 };
 
-cardData.forEach((element) => createCard(element));
+// const openCard = (card) => {
+//   card.addEventListener("click", function (evt) {
+//     this.classList.toggle("card__toggle");
+//     //check cards
+//     checkCards(evt);
+//     //start step counter
+//     stepCounterStart();
+//   });
+// };
 
-//startPlay
+// cardData.forEach((element) => createCard(element));
+
+//startPlay function
 const startPlay = () => {
   if (playerName.value.length !== 0) {
     startWindow.classList.add("start-window_hidden");
@@ -53,9 +65,9 @@ const startPlay = () => {
     timerStart(0, 0);
   }
 };
-startPlayButton.addEventListener("click", startPlay);
+// startPlayButton.addEventListener("click", startPlay);
 
-//playAgain
+//playAgain function
 const playAgain = () => {
   resultGameWindow.classList.add("result-window_hidden");
   stepCounterStop();
@@ -64,8 +76,9 @@ const playAgain = () => {
   startWindow.classList.remove("start-window_hidden");
   restartGame();
 };
-playAgainButton.addEventListener("click", playAgain);
-//showResults
+// playAgainButton.addEventListener("click", playAgain);
+
+//showResults functions
 const toggleGameResultsWindow = () => {
   startWindow.classList.toggle("start-window_hidden");
   resultGamesWindow.classList.toggle("games-results-window_hidden");
@@ -76,8 +89,14 @@ const closeGameResultsWindow = () => {
   resultGamesWindow.classList.add("games-results-window_hidden");
 };
 
-buttonResult.addEventListener("click", function () {
-  toggleGameResultsWindow();
-});
-resultGamesWindow.addEventListener("click", closeGameResultsWindow);
-export { createCard, startPlay };
+// buttonResult.addEventListener("click", function () {
+//   toggleGameResultsWindow();
+// });
+// resultGamesWindow.addEventListener("click", closeGameResultsWindow);
+export {
+  createCard,
+  startPlay,
+  playAgain,
+  toggleGameResultsWindow,
+  closeGameResultsWindow,
+};
