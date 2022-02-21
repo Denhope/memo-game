@@ -4,10 +4,6 @@ import { restartGame } from "./_restartGame";
 import { timerStart } from "./_timer";
 import { stepCounterStart, stepCounterStop } from "./_stepCounter";
 import { scoreCounterStop } from "./_scoreCounter";
-import { creareResultTabble } from "./_gamesResults";
-import { resArray } from "./_storage";
-// import { creareResultTabble } from "./_gamesResults.js";
-// import { getLocalStorage, resArray } from "./_storage";
 
 // constants
 const body = document.querySelector("body");
@@ -18,12 +14,10 @@ const startWindow = document.querySelector(".start-window");
 const resultGameWindow = document.querySelector(".result-window");
 const playerName = document.querySelector(".player-name");
 const timeCounterField = document.querySelector(".time_counter");
-
-let cardData = getRandomPicture();
-
 const buttonResult = document.querySelector(".result-score_button");
 const resultGamesWindow = document.querySelector(".games-results-window");
-const buttonCloseResult = document.querySelector(".close-result-window");
+
+let cardData = getRandomPicture();
 
 // create cards field
 const createCard = (item) => {
