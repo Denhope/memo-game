@@ -10,10 +10,10 @@ function getLocalStorage() {
   if (localStorage.getItem("result")) {
     const res = localStorage.getItem("result");
     resArray = JSON.parse(res);
-    creareResultTabble();
+    creareResultTabble(resArray);
     console.log(`Game results:`);
     console.log(resArray);
-    return resArray;
+    // return resArray;
   }
 }
 

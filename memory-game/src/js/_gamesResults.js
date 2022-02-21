@@ -1,5 +1,5 @@
 import { stepCounterStart } from "./_stepCounter";
-import { resArray } from "./_storage";
+// import { resArray } from "./_storage";
 
 let scoreStorge = document.querySelector(".final-score");
 let timerStorage = document.querySelector(".final-time");
@@ -21,12 +21,12 @@ const createPlayerResult = () => {
     timerStorage.textContent,
     stepCounterStart().toString()
   );
-  console.log(player);
   return player;
 };
 
 // create result tabble function
-const creareResultTabble = () => {
+const creareResultTabble = (resArray) => {
+  document.querySelector(".results-game").textContent = "";
   let userCount = resArray.length;
   let title = document.createElement("tr");
   title.innerHTML = `<td colspan name=tabble-title>№</td><td colspan name=tabble-title>Name</td><td colspan name=tabble-title>Score</td><td colspan name=tabble-title>Time</td><td colspan name=tabble-title>Steps</td>`;

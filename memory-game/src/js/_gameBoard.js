@@ -1,5 +1,4 @@
 import { checkCards } from "./_gameLogic";
-
 import { restartGame } from "./_restartGame";
 import { timerStart } from "./_timer";
 import { stepCounterStart, stepCounterStop } from "./_stepCounter";
@@ -8,7 +7,6 @@ import { scoreCounterStop } from "./_scoreCounter";
 // constants
 const body = document.querySelector("body");
 const gameBoard = document.querySelector(".game-board");
-
 const startWindow = document.querySelector(".start-window");
 const resultGameWindow = document.querySelector(".result-window");
 const playerName = document.querySelector(".player-name");
@@ -40,7 +38,6 @@ const createCard = (item) => {
   });
 };
 
-//
 //startPlay function
 const startPlay = () => {
   if (playerName.value.length !== 0) {
@@ -75,7 +72,6 @@ const closeGameResultsWindow = () => {
 
 export {
   createCard,
-  // openCard,
   startPlay,
   playAgain,
   toggleGameResultsWindow,

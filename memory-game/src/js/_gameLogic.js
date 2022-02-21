@@ -1,5 +1,5 @@
 import { scoreCounterHigh, scoreCounterLow } from "./_scoreCounter";
-import { createPlayerResult } from "./_gamesResults";
+import { creareResultTabble, createPlayerResult } from "./_gamesResults";
 import * as timer from "./_timer";
 import { resArray } from "./_storage";
 
@@ -13,6 +13,7 @@ const checkCards = (evt) => {
   const scoreWindow = document.querySelector(".result-window");
   const body = document.querySelector("body");
   const gameBoard = document.querySelector(".game-board");
+  const buttonResult = document.querySelector(".result-score_button");
 
   // check card for counting result
   if (activeCards.length === 2) {
@@ -45,7 +46,7 @@ const checkCards = (evt) => {
   //win game
   if (taggleCard.length === 20) {
     scoreWindow.classList.remove("result-window_hidden");
-    // buttonResult.style.pointerEvents = "auto";
+    buttonResult.style.pointerEvents = "auto";
     body.classList.add("body_lock");
     timer.timerStop();
 
@@ -55,8 +56,7 @@ const checkCards = (evt) => {
       resArray.pop();
       resArray.unshift(createPlayerResult());
     }
-    // creareResultTabble();
-    console.log(resArray);
   }
 };
+
 export { checkCards };
