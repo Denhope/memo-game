@@ -17,7 +17,6 @@ const checkCards = (evt) => {
   // check card for counting result
   if (activeCards.length === 2) {
     gameBoard.style.pointerEvents = "none";
-    // console.log(player);
     if (
       //same cards
       activeCards[0].getAttribute("data-name") ===
@@ -28,6 +27,7 @@ const checkCards = (evt) => {
       activeCards.forEach((item) => {
         item.style.pointerEvents = "none";
         item.classList.remove("active");
+        gameBoard.style.pointerEvents = "auto";
       });
     } else {
       //diferent cards
