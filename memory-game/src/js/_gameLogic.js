@@ -6,15 +6,17 @@ import { resArray } from "./_storage";
 //check cards function
 const checkCards = (evt) => {
   //constants
+  const clickedCard = evt.target;
+  clickedCard.classList.add("active");
   const activeCards = document.querySelectorAll(".active");
   const taggleCard = document.querySelectorAll(".card__toggle");
   const scoreWindow = document.querySelector(".result-window");
   const body = document.querySelector("body");
-  const clickedCard = evt.target;
-  clickedCard.classList.add("active");
+  const gameBoard = document.querySelector(".game-board");
 
   // check card for counting result
   if (activeCards.length === 2) {
+    gameBoard.style.pointerEvents = "none";
     // console.log(player);
     if (
       //same cards
@@ -31,11 +33,15 @@ const checkCards = (evt) => {
       //diferent cards
       activeCards.forEach((item) => {
         item.classList.remove("active");
-        setTimeout(() => item.classList.remove("card__toggle"), 900);
+        setTimeout(() => {
+          item.classList.remove("card__toggle");
+          gameBoard.style.pointerEvents = "auto";
+        }, 900);
       });
       scoreCounterLow();
     }
   }
+
   //win game
   if (taggleCard.length === 20) {
     scoreWindow.classList.remove("result-window_hidden");
