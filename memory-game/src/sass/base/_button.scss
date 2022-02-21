@@ -1,12 +1,11 @@
 .button {
-  width: 45%;
+  width: 57%;
   height: auto;
-  padding: 0.6rem 0;
+  padding: 0.6rem 0.6rem;
   font-family: Inter;
   border-radius: 1rem;
   background: $shadow;
-  @include font(2rem, 4rem, $wight: normal);
-
+  @include font(2rem, 4.5rem, $wight: normal);
   cursor: pointer;
   text-align: center;
   color: $blackMat;
@@ -22,19 +21,31 @@
       color: $background-button-hovered;
     }
   }
+  @include media-tablet {
+    @include font(1.8rem, 4rem, $wight: normal);
+    color: $blackMat;
+  }
   @include media-mobile {
-    @include font(1.5rem, 1.5rem, $wight: normal);
+    @include font(1.5rem, 2.5rem, $wight: normal);
+    color: $blackMat;
+  }
+  @include media-mobile-small {
+    @include font(1.3rem, 2.5rem, $wight: normal);
     color: $blackMat;
   }
 }
 
 .result-score_button {
-  // border-radius: 50%;
+  width: 32%;
   @include font(2rem, 2rem, $wight: normal);
   padding: 0.5rem;
   color: $blackMat;
   @include media-mobile {
-    @include font(1.5rem, 1.5rem, $wight: normal);
+    @include font(1.3rem, 1.5rem, $wight: normal);
+    color: $blackMat;
+  }
+  @include media-mobile-small {
+    @include font(1.2rem, 1.5rem, $wight: normal);
     color: $blackMat;
   }
 }

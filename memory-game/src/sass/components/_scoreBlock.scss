@@ -9,9 +9,6 @@
     padding: 0.5rem 1rem;
     gap: 0.4rem;
   }
-  @include media-mobile-small {
-    display: none;
-  }
 
   .title {
     width: 150px;
@@ -27,10 +24,25 @@
       width: 50px;
     }
   }
+
+  .step__title,
+  .score__title {
+    @include media-mobile {
+      width: 85px;
+    }
+    @include media-mobile-medium {
+      width: 25%;
+    }
+    @include media-mobile-small {
+      width: 45px;
+    }
+  }
 }
+
 .time,
 .step,
 .score {
   display: flex;
   align-items: center;
+  width: 100%;
 }

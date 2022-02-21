@@ -5,13 +5,12 @@
   transition: all 0.3s ease-out;
   position: absolute;
   left: 50%;
-  // top: 50%;
   transform: translate(-50%, -50%);
   width: 35%;
+  gap: 1rem;
   @include media-laptop {
     width: 50%;
   }
-
   @include media-mobile-small {
     width: 90%;
   }
@@ -21,7 +20,13 @@
   box-shadow: $shadow;
   padding: 2%;
   border-radius: 1rem;
-  // @extend %transition;
+}
+
+.result-window__info {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
 }
 
 .result-window_hidden {

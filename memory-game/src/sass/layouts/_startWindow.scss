@@ -5,13 +5,11 @@
   justify-content: center;
   position: absolute;
   left: 50%;
-  // top: 50%;
   transform: translate(-50%, -50%);
   width: 35%;
   @include media-laptop {
     width: 45%;
   }
-
   height: auto;
   gap: 1rem;
   z-index: 1000;

@@ -10,19 +10,3 @@
     align-items: stretch;
   }
 }
-
-// .logo {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 2rem;
-
-//   @extend %transition;
-//   img {
-//     fill: $color-fill;
-//     &:hover {
-//       @extend %transition;
-//       filter: $hover;
-//     }
-//   }
-// }

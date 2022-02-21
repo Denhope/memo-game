@@ -4,6 +4,7 @@
   padding: 2rem;
   position: relative;
 }
+
 .game-board {
   max-width: 100%;
   background: $background-game-board;
@@ -27,6 +28,7 @@
   position: absolute;
   pointer-events: none;
 }
+
 .card {
   height: 14rem;
   width: 14rem;
@@ -57,6 +59,7 @@
     border-radius: 1rem;
   }
 }
+
 .backside {
   backface-visibility: hidden;
   background: $background-card;

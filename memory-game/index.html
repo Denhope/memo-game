@@ -16,23 +16,23 @@
         <span class="logo__image">          
           <!-- <a href="#"><img class="header__logo" src="./src/assets/img/icons/header/unsplash.svg" alt="header-logo"></a> -->
         </span>
-        <h2 class="logo__text">MEMORY GAME</h2>
+        <h1 class="logo__text">MEMORY GAME</h1>
       </div>
 
       <div class="score-block">
         <div class="time">
-          <p class="title">Time:
+          <p class="title time__title">Time:
             <span class="time_counter">00.00</span>
           </p>          
         </div>
         <div class="step">
-          <p class="title">Step:
+          <p class="title step__title">Step:
             <span class="step_counter">0</span>
           </p>          
         </div>
 
         <div class="score">
-          <p class="title">Score:
+          <p class="title score__title">Score:
             <span class="score_counter">0</span>
           </p>          
         </div>
@@ -52,16 +52,16 @@
       <section id="start">
         <div class="start-window">
           <h2 class="hello-text">Hello!</h2>
-          <p>Enter name and start the game</p>
-          
-          <input  class ="player-name" id="player-name" type="text" placeholder="Enter name" autofocus>          
+          <p>Enter name and start the game</p>          
+          <input  class ="player-name" id="player-name" type="text" placeholder="Name" autofocus>          
           <button class="button start-play">Start</button>          
         </div>
       </section>    
 
       <section id="result" >
         <div class="result-window result-window_hidden">
-          <h2 class="result__text">Game Over!
+          <h2 class="result-window__title">Game Over!</h2> 
+          <div class="result-window__info">
             <p class="title">Score:
               <span class="final-score"></span>
             </p>               
@@ -71,8 +71,7 @@
             <p class="title">Steps:
               <span class="final-steps"></span>
             </p>
-          </h2> 
-          <p>Click Play again</p>
+          </div>          
           <button class="button start-playAgain">Play again</button>
         </div>
       </section>

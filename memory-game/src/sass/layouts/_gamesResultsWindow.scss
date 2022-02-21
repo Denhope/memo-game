@@ -6,7 +6,6 @@
   position: absolute;
   cursor: pointer;
   left: 50%;
-  // top: 50%;
   transform: translate(-50%, -50%);
   width: 35%;
   @include media-laptop {
@@ -15,15 +14,16 @@
   @include media-mobile {
     width: 69%;
   }
-
   height: auto;
   gap: 1rem;
   z-index: 1000;
   background: $background-start-window;
   box-shadow: $shadow;
   padding: 2%;
+  padding-bottom: 6%;
   border-radius: 1rem;
 }
+
 .games-results-window_hidden {
   @extend %transition;
   display: none;
@@ -41,7 +41,7 @@ td:first-child {
 .results-game {
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
   font-size: 1.5rem;
-  // border-radius: 20px;
+
   border-spacing: 0;
   text-align: center;
 }
@@ -49,7 +49,6 @@ td:first-child {
 td {
   border-style: solid;
   border-width: 0 1px 1px 0;
-  // border-color: white;
 }
 
 td:first-child {
