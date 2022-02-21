@@ -11,6 +11,7 @@ function getLocalStorage() {
     const res = localStorage.getItem("result");
     resArray = JSON.parse(res);
     creareResultTabble();
+    console.log(`Game results:`);
     console.log(resArray);
     return resArray;
   }
