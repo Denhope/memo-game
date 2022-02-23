@@ -45,48 +45,35 @@
   </header>
   <main class="main">
     <div class="wrapper main__wrapper">
-      <section id="game">     
-        <div class="game-board"></div>     
-      </section>
+      <section class="game-board"></section>
     
-      <section id="start">
-        <div class="start-window">
-          <h2 class="hello-text">Hello!</h2>
-          <p>Enter name and start the game</p>          
-          <input  class ="player-name" id="player-name" type="text" placeholder="Name" autofocus>          
-          <button class="button start-play">Start</button>          
-        </div>
+      <section class="start-window">        
+        <h2 class="hello-text">Hello!</h2>
+        <p>Enter name and start the game</p>          
+        <input  class ="player-name" id="player-name" type="text" placeholder="Name" autofocus>          
+        <button class="button start-play">Start</button>  
       </section>    
 
-      <section id="result" >
-        <div class="result-window result-window_hidden">
-          <h2 class="result-window__title">Game Over!</h2> 
-          <div class="result-window__info">
-            <p class="title">Score:
-              <span class="final-score"></span>
-            </p>               
-            <p class="title">Time:
-              <span class="final-time"></span>
-            </p>
-            <p class="title">Steps:
-              <span class="final-steps"></span>
-            </p>
-          </div>          
-          <button class="button start-playAgain">Play again</button>
-        </div>
+      <section class="result-window result-window_hidden" >        
+        <h2 class="result-window__title">Game Over!</h2> 
+        <div class="result-window__info">
+          <p class="title">Score:
+            <span class="final-score"></span>
+          </p>               
+          <p class="title">Time:
+            <span class="final-time"></span>
+          </p>
+          <p class="title">Steps:
+            <span class="final-steps"></span>
+          </p>
+        </div>          
+        <button class="button start-playAgain">Play again</button>        
       </section>
 
-      <section id="games-results" >
-        <div class="games-results-window games-results-window_hidden">
-          <p class="games-results-window__text">Game results</p>
-          <table class="results-game"></table>
-<!--           
-          <p>Close</p>
-          <button class="button close-result-window">close</button> -->
-        </div>
+      <section class="games-results-window games-results-window_hidden">        
+        <p class="games-results-window__text">Game results</p>
+        <table class="results-game"></table> 
       </section>
-
-
     </div>
 
   </main>
