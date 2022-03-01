@@ -19,9 +19,9 @@ module.exports = (env, options) => {
       filename: "script.js",
       assetModuleFilename: "assets/public/[hash][ext]",
     },
-    optimization: {
-      minimize: false,
-    },
+    // optimization: {
+    //   minimize: false,
+    // },
     resolve: {
       extensions: [".js", ".json", ".mjs"],
     },
