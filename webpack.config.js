@@ -18,10 +18,7 @@ module.exports = (env, options) => {
       path: path.join(__dirname, "/dist"),
       filename: "script.js",
       assetModuleFilename: "assets/public/[hash][ext]",
-    },
-    // optimization: {
-    //   minimize: false,
-    // },
+    },  
     resolve: {
       extensions: [".js", ".json", ".mjs"],
     },
@@ -54,7 +51,7 @@ module.exports = (env, options) => {
     },
     devServer: {
       open: true,
-      port: 9000,
+      port: 1000,
     },
 
     plugins: [
