@@ -15,6 +15,7 @@ module.exports = (env, options) => {
     watch: !isProduction,
     entry: ['./src/index.js', './src/sass/style.scss'],
     output: {
+<<<<<<< HEAD
       path: path.join(__dirname, '/dist'),
       filename: 'script.js',
       assetModuleFilename: 'assets/public/[hash][ext]',
@@ -22,6 +23,12 @@ module.exports = (env, options) => {
     // optimization: {
     //   minimize: false,
     // },
+=======
+      path: path.join(__dirname, "/dist"),
+      filename: "script.js",
+      assetModuleFilename: "assets/public/[hash][ext]",
+    },  
+>>>>>>> 739cb0b2fc7aef1f894120718e49bbd9acfcb66d
     resolve: {
       extensions: ['.js', '.json', '.mjs'],
     },
