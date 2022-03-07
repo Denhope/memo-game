@@ -16,7 +16,7 @@ npm install
 ```
 
 ```bash
-# Server with hot reload at http://localhost: 9000/
+# Server with hot reload at http://localhost: 1000/
 npm run serv
 ```
 
