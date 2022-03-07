@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "memo-game",
   "version": "1.0.0",
-  "description": "",
+  "description": "Js task in RS School",
   "main": "index.js",
   "scripts": {
     "style": "sass --watch src/sass/style.scss src/sass/style.css",
@@ -13,7 +13,7 @@
     "type": "git",
     "url": ""
   },
-  "author": "",
+  "author": "Denis Kovalchuk",
   "license": "ISC",
   "bugs": {},
   "homepage": "",
