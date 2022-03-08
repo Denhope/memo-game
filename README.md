@@ -30,5 +30,5 @@ npm run prod
 npm run dev
 ```
 
-## You can play in My game:
+## You can play in my game:
 https://denhope-memogame.netlify.app/
